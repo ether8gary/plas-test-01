@@ -1,2 +1,3 @@
 # plas-test-01
-temp
+
+This is a simple repository to build an Alpine based docker container running an nginx web server.
