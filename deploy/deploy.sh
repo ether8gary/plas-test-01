@@ -20,4 +20,5 @@ else
 fi
 
 #Tag docker image with remote respository and push to dockerhub
-sudo docker tag 621ae34ddd2a tulasi465/task:v1 && sudo docker push tulasi465/task:v1
+container="docker ps -l -q"
+sudo docker tag $container tulasi465/task:v1 && sudo docker push tulasi465/task:v1
