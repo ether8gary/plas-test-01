@@ -19,6 +19,14 @@ else
   echo "Website is down"
 fi
 
-#Tag docker image with remote respository and push to dockerhub
-alias tag_container='docker ps -l -q'
-sudo docker tag `tag_container` tulasi465/task:v1 && sudo docker push tulasi465/task:v1
+#Tag docker image with containerID and push to private docker hub
+#alias tag_container="docker ps -l -q"
+#container=`tag_container`
+#private_docker=
+#docker tag $container $private_docker
+
+#Tag docker image and push to remote dockerhub
+docker tag 621ae34ddd2a tulasi465/task:v1
+
+#Push to DockerHub
+docker push tulasi465/task:v1
